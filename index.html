@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="T Varaprasad - Tech content creator and software developer working with C, data structures and algorithms.">
+    <meta name="theme-color" content="#040406">
     <title>T Varaprasad | Tech Content Creator & Developer</title>
+
+    <!-- Fonts (fixed URLs) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Icons (fixed URL) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Essential fonts layout infrastructure -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- HIGH PERFORMANCE MULTI-COLORED PARTICLES -->
-    <canvas id="animation-canvas"></canvas>
+    <canvas id="animation-canvas" aria-hidden="true"></canvas>
 
-    <!-- Navigation Header -->
-    <nav class="navbar">
-        <div class="logo">TV<span>.</span></div>
-        <ul class="nav-links">
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="#home" class="logo" aria-label="T Varaprasad, home">TV<span>.</span></a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -28,95 +36,90 @@
         </ul>
     </nav>
 
-    <!-- Cyberpunk Creator Hero Section -->
-    <header id="home" class="hero-section">
-        <div class="hero-content">
-            <span class="badge"><span class="live-dot"></span> Creating Tech Content</span>
-            <h1>Hi, I'm <span class="gradient-text">T Varaprasad</span></h1>
-            <p class="subtitle">Tech Content Creator & Software Developer building logic and educating the next generation of engineers.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary">Let's Collaborate <i class="fa-solid fa-arrow-trend-up"></i></a>
-                <a href="#skills" class="btn btn-secondary">Explore Competencies</a>
+    <main id="main">
+        <header id="home" class="hero-section">
+            <div class="hero-content">
+                <span class="badge"><span class="live-dot"></span> Creating tech content</span>
+                <h1>Hi, I'm <span class="gradient-text">T Varaprasad</span></h1>
+                <p class="subtitle">Tech content creator and software developer. I build logic in code and explain it to the next generation of engineers.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Let's collaborate <i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i></a>
+                    <a href="#skills" class="btn btn-secondary">See my skills</a>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="section-header">
-            <span class="section-tag">The Story</span>
-            <h2>About Me</h2>
-        </div>
-        <p class="about-text">
-            I am a technical storyteller and focused developer sitting at the intersection of complex systems engineering and creative media production. Whether I am architecting efficient data pipelines in low-level languages or breaking down intricate digital trends for public channels, my goal is to make computer science transparent, engaging, and structurally sound.
-        </p>
-    </section>
+        <section id="about" class="section">
+            <div class="section-header">
+                <span class="section-tag">The story</span>
+                <h2>About me</h2>
+            </div>
+            <p class="about-text">
+                I am a technical storyteller and developer working between systems engineering and creative media. Whether I am building efficient data pipelines in low-level languages or breaking down digital trends for public channels, my goal is to make computer science clear, engaging and well structured.
+            </p>
+        </section>
 
-    <!-- Upgraded Skills & Creator Stack Grid -->
-    <section id="skills" class="section">
-        <div class="section-header">
-            <span class="section-tag">My Toolbox</span>
-            <h2>Skills & Strengths</h2>
-        </div>
-        <div class="skills-grid">
-            <!-- New Card 1: Content Creation -->
-            <div class="skill-card tech-creator-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-video"></i></div>
-                <h3>Tech Content Creation</h3>
-                <ul class="card-list">
-                    <li>Technical Scriptwriting</li>
-                    <li>Video Production & Editing</li>
-                    <li>Complex Tech Simplification</li>
-                </ul>
+        <section id="skills" class="section">
+            <div class="section-header">
+                <span class="section-tag">My toolbox</span>
+                <h2>Skills & strengths</h2>
             </div>
-            <!-- Card 2: Systems Core -->
-            <div class="skill-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-code"></i></div>
-                <h3>Technical Core</h3>
-                <ul class="card-list">
-                    <li>C Programming Language</li>
-                    <li>Data Structures</li>
-                    <li>Algorithms (DSA)</li>
-                </ul>
+            <div class="skills-grid">
+                <article class="skill-card tech-creator-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-video" aria-hidden="true"></i></div>
+                    <h3>Tech content creation</h3>
+                    <ul class="card-list">
+                        <li>Technical scriptwriting</li>
+                        <li>Video production & editing</li>
+                        <li>Simplifying complex tech</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+                    <h3>Technical core</h3>
+                    <ul class="card-list">
+                        <li>C programming language</li>
+                        <li>Data structures</li>
+                        <li>Algorithms (DSA)</li>
+                    </ul>
+                </article>
+                <article class="skill-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
+                    <h3>Core strengths</h3>
+                    <ul class="card-list">
+                        <li>Advanced problem solving</li>
+                        <li>Teamwork</li>
+                        <li>Fast learning</li>
+                    </ul>
+                </article>
             </div>
-            <!-- Card 3: Execution Strengths -->
-            <div class="skill-card">
-                <div class="icon-wrapper"><i class="fa-solid fa-bolt"></i></div>
-                <h3>Core Strengths</h3>
-                <ul class="card-list">
-                    <li>Advanced Problem Solving</li>
-                    <li>Synergistic Teamwork</li>
-                    <li>Fast Learning Iterations</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Interactive Contact Module -->
-    <section id="contact" class="section">
-        <div class="section-header">
-            <span class="section-tag">Get in Touch</span>
-            <h2>Let's Build Something</h2>
-        </div>
-        <div class="contact-box">
-            <p>Ready to discuss brand partnerships, core development tasks, or media content pipeline creation?</p>
-            <div class="contact-links">
-                <a href="mailto:varaprasadteki83@gmail.com" class="contact-item">
-                    <i class="fa-regular fa-envelope"></i> <span>Gmail</span>
-                </a>
-                <a href="https://linkedin.com" target="_blank" class="contact-item">
-                    <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn Profile</span>
-                </a>
-                <a href="https://github.com" target="_blank" class="contact-item">
-                    <i class="fa-brands fa-github"></i> <span>GitHub Hub</span>
-                </a>
+        <section id="contact" class="section">
+            <div class="section-header">
+                <span class="section-tag">Get in touch</span>
+                <h2>Let's build something</h2>
             </div>
-        </div>
-    </section>
+            <div class="contact-box">
+                <p>Want to discuss a brand partnership, a development task or a content project? Send me a message.</p>
+                <div class="contact-links">
+                    <a href="mailto:varaprasadteki83@gmail.com" class="contact-item">
+                        <i class="fa-regular fa-envelope" aria-hidden="true"></i> <span>Gmail</span>
+                    </a>
+                    <!-- Replace with your own profile URLs -->
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i> <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Premium Footer -->
     <footer>
-        <p>&copy; 2026 T Varaprasad. Engineered with creative and structural execution.</p>
+        <p>&copy; <span id="year">2026</span> T Varaprasad. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
