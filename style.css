@@ -1,8 +1,8 @@
-/* Deep Obsidian & Cyber Neon Color Architecture */
+/* Core Styling Rules - Premium Dark Mode Theme */
 :root {
     --bg-dark: #040406; /* Deep midnight obsidian */
-    --card-bg: rgba(14, 14, 22, 0.6);
-    --border-color: rgba(255, 255, 255, 0.05);
+    --card-bg: #0e0e16; /* Fixed solid dark color to avoid transparency bugs */
+    --border-color: rgba(255, 255, 255, 0.08);
     --text-main: #f3f4f6;
     --text-muted: #a3a3b3;
     --accent-magenta: #ff007f;
@@ -24,6 +24,7 @@ html {
 
 body {
     color: var(--text-main);
+    background-color: var(--bg-dark);
     overflow-x: hidden;
     position: relative;
 }
@@ -39,7 +40,7 @@ body {
     pointer-events: none;
 }
 
-/* Glassmorphism Navigation Bar */
+/* Fixed Navigation Bar (Removed problematic backdrop-blur) */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -50,9 +51,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(4, 4, 6, 0.55);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    background: #040406; /* Solid dark background to fix visibility */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -85,16 +84,20 @@ body {
     color: var(--text-main);
 }
 
-/* Interactive Hero Header layout */
+/* Hero Section Layout Configuration */
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 8%;
+    padding: 120px 8% 60px 8%; /* Added extra top padding so nav bar doesn't block text */
+    position: relative;
+    z-index: 2;
 }
 
 .hero-content {
     max-width: 800px;
+    position: relative;
+    z-index: 3;
 }
 
 /* Live Active Content Badge */
@@ -103,8 +106,8 @@ body {
     align-items: center;
     gap: 8px;
     padding: 6px 14px;
-    background: rgba(255, 0, 127, 0.08);
-    border: 1px solid rgba(255, 0, 127, 0.2);
+    background: rgba(255, 0, 127, 0.15);
+    border: 1px solid rgba(255, 0, 127, 0.3);
     color: #ff3399;
     border-radius: 20px;
     font-size: 12px;
@@ -133,13 +136,15 @@ body {
     line-height: 1.1;
     margin-bottom: 20px;
     letter-spacing: -2px;
+    color: #ffffff;
 }
 
-/* Eye-Catching Creator Multi-Color Gradient Text */
+/* Multi-Color Gradient Text */
 .gradient-text {
     background: linear-gradient(135deg, #ffffff 10%, #ff007f 60%, #00f0ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 .subtitle {
@@ -155,7 +160,7 @@ body {
     gap: 16px;
 }
 
-/* High Contrast CTA Buttons */
+/* Buttons */
 .btn {
     padding: 14px 28px;
     font-size: 14px;
@@ -165,7 +170,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
@@ -177,7 +182,6 @@ body {
 .btn-primary:hover {
     background: #e00070;
     transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(255, 0, 127, 0.4);
 }
 
 .btn-secondary {
@@ -187,15 +191,16 @@ body {
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
     transform: translateY(-2px);
 }
 
-/* Sections Layout Structure */
+/* Structural Layout Sections */
 .section {
     padding: 120px 8%;
     border-bottom: 1px solid var(--border-color);
+    position: relative;
+    z-index: 2;
 }
 
 .section-header {
@@ -216,6 +221,7 @@ h2 {
     font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: -0.5px;
+    color: #ffffff;
 }
 
 .about-text {
@@ -226,7 +232,7 @@ h2 {
     font-weight: 300;
 }
 
-/* Interactive Grid Framework */
+/* Grid Layout */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -238,27 +244,23 @@ h2 {
     border: 1px solid var(--border-color);
     padding: 36px;
     border-radius: 12px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    transform-style: preserve-3d;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Card Highlighting Variants */
 .skill-card:hover {
-    border-color: rgba(0, 240, 255, 0.3);
-    box-shadow: 0 15px 35px rgba(0, 240, 255, 0.08);
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 240, 255, 0.1);
 }
 
 .skill-card.tech-creator-card:hover {
-    border-color: rgba(255, 0, 127, 0.3);
-    box-shadow: 0 15px 35px rgba(255, 0, 127, 0.08);
+    border-color: rgba(255, 0, 127, 0.4);
+    box-shadow: 0 15px 35px rgba(255, 0, 127, 0.1);
 }
 
 .icon-wrapper {
     width: 48px;
     height: 48px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     display: flex;
@@ -267,12 +269,6 @@ h2 {
     color: var(--accent-blue);
     font-size: 18px;
     margin-bottom: 24px;
-    transition: color 0.3s, transform 0.3s;
-}
-
-.skill-card:hover .icon-wrapper {
-    color: var(--accent-blue);
-    transform: translateZ(20px);
 }
 
 .skill-card.tech-creator-card .icon-wrapper {
@@ -283,6 +279,7 @@ h2 {
     font-size: 19px;
     margin-bottom: 16px;
     font-weight: 600;
+    color: #ffffff;
 }
 
 .card-list {
@@ -298,13 +295,7 @@ h2 {
     gap: 8px;
 }
 
-.card-list li::before {
-    content: "⚡";
-    font-size: 10px;
-    opacity: 0.7;
-}
-
-/* Premium Layout Contact Area */
+/* Contact Area Config */
 .contact-box {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -313,7 +304,6 @@ h2 {
     text-align: center;
     max-width: 750px;
     margin: 0 auto;
-    backdrop-filter: blur(16px);
 }
 
 .contact-box p {
@@ -333,7 +323,7 @@ h2 {
     align-items: center;
     gap: 10px;
     padding: 12px 24px;
-    background: rgba(255, 255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     color: var(--text-main);
@@ -345,7 +335,6 @@ h2 {
 
 .contact-item:hover {
     border-color: var(--accent-blue);
-    background: rgba(0, 240, 255, 0.04);
     color: var(--accent-blue);
     box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
 }
@@ -354,13 +343,15 @@ footer {
     padding: 40px 8%;
     text-align: center;
     border-top: 1px solid var(--border-color);
-    color: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.2);
     font-size: 13px;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
     .nav-links { display: none; }
-    .hero-content h1 { font-size: 2.75rem; }
+    .hero-content h1 { font-size: 2.5rem; }
     .hero-cta { flex-direction: column; }
     .section { padding: 80px 5%; }
 }
